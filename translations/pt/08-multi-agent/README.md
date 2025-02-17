@@ -169,7 +169,7 @@ Nesta lição, exploramos o padrão de design para multiagentes, incluindo os ce
 
 ## Recursos adicionais
 
-- [Padrões de design Autogen](https://microsoft.github.io/autogen/0.4.0.dev4/user-guide/core-user-guide/design-patterns/index.html)
+- [Padrões de design Autogen](https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/design-patterns/intro.html)
 - [Padrões de design agentic](https://www.analyticsvidhya.com/blog/2024/10/agentic-design-patterns/)
 ```
 

@@ -163,7 +163,7 @@
 
 ## 其他資源
 
-- [Autogen 設計模式](https://microsoft.github.io/autogen/0.4.0.dev4/user-guide/core-user-guide/design-patterns/index.html)
+- [Autogen 設計模式](https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/design-patterns/intro.html)
 - [Agentic 設計模式](https://www.analyticsvidhya.com/blog/2024/10/agentic-design-patterns/)
 
 **免責聲明**：  

@@ -171,7 +171,7 @@ In dieser Lektion haben wir das Multi-Agent-Designmuster untersucht, einschließ
 
 ## Zusätzliche Ressourcen
 
-- [Autogen design patterns](https://microsoft.github.io/autogen/0.4.0.dev4/user-guide/core-user-guide/design-patterns/index.html)
+- [Autogen design patterns](https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/design-patterns/intro.html)
 - [Agentic design patterns](https://www.analyticsvidhya.com/blog/2024/10/agentic-design-patterns/)
 ```
 

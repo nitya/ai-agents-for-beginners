@@ -48,7 +48,7 @@ Let's use the example of getting the current time in a city to illustrate:
 
 - **Initialize an LLM that supports function calling:**
 
-    Not all models support function calling, so it's important to check that the LLM you are using does. [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling) supports function calling. We can start by initiating the Azure OpenAI client. 
+    Not all models support function calling, so it's important to check that the LLM you are using does. [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling){target="_blank"} supports function calling. We can start by initiating the Azure OpenAI client. 
 
     ```python
     # Initialize the Azure OpenAI client
@@ -180,16 +180,16 @@ As we learned in [Lesson 2](../02-explore-agentic-frameworks/) agentic framework
  
 ### Tool Use Examples with Agentic Frameworks
 
-- ### **[Semantic Kernel](https://learn.microsoft.com/azure/ai-services/agents/overview)**
+- ### **[Semantic Kernel](https://learn.microsoft.com/azure/ai-services/agents/overview){target="_blank"}**
 
-    Semantic Kernel is an open-source AI framework for .NET, Python, and Java developers working with Large Language Models (LLMs). It simplifies the process of using function calling by automatically describing your functions and their parameters to the model through a process called [serializing](https://learn.microsoft.com/semantic-kernel/concepts/ai-services/chat-completion/function-calling/?pivots=programming-language-python#1-serializing-the-functions). It also handles the back-and-forth communication between the model and your code. Another advantage of using an agentic framework like Semantic Kernel, is that it allows you to access pre-built tools like [File Search](https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step4_assistant_tool_file_search.py) and [Code Interpreter](https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step3_assistant_tool_code_interpreter.py).
+    Semantic Kernel is an open-source AI framework for .NET, Python, and Java developers working with Large Language Models (LLMs). It simplifies the process of using function calling by automatically describing your functions and their parameters to the model through a process called [serializing](https://learn.microsoft.com/semantic-kernel/concepts/ai-services/chat-completion/function-calling/?pivots=programming-language-python#1-serializing-the-functions){target="_blank"}. It also handles the back-and-forth communication between the model and your code. Another advantage of using an agentic framework like Semantic Kernel, is that it allows you to access pre-built tools like [File Search](https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step4_assistant_tool_file_search.py){target="_blank"} and [Code Interpreter](https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step3_assistant_tool_code_interpreter.py){target="_blank"}.
 
     The following diagram illustrates the process of function calling with Semantic Kernel:
 
     ![function calling](./images/functioncalling-diagram.png)
 
 
-    In Semantic Kernel functions/tools are called [Plugins](https://learn.microsoft.com/semantic-kernel/concepts/plugins/?pivots=programming-language-python). We can convert the `get_current_time` function we saw earlier into a plugin by turning it into a class with the function in it. We can also import the `kernel_function` decorator, which takes in the description of the function. When you then create a kernel with the GetCurrentTimePlugin, the kernel will automatically serialize the function and its parameters, creating the schema to send to the LLM in the process.
+    In Semantic Kernel functions/tools are called [Plugins](https://learn.microsoft.com/semantic-kernel/concepts/plugins/?pivots=programming-language-python){target="_blank"}. We can convert the `get_current_time` function we saw earlier into a plugin by turning it into a class with the function in it. We can also import the `kernel_function` decorator, which takes in the description of the function. When you then create a kernel with the GetCurrentTimePlugin, the kernel will automatically serialize the function and its parameters, creating the schema to send to the LLM in the process.
 
     ```python
     from semantic_kernel.functions import kernel_function
@@ -219,7 +219,7 @@ As we learned in [Lesson 2](../02-explore-agentic-frameworks/) agentic framework
     kernel.add_plugin(get_current_time_plugin)
     ```
   
-- ### **[Azure AI Agent Service](https://learn.microsoft.com/azure/ai-services/agents/overview)**
+- ### **[Azure AI Agent Service](https://learn.microsoft.com/azure/ai-services/agents/overview){target="_blank"}**
 
     Azure AI Agent Service is a newer agentic framework that is designed to empower developers to securely build, deploy, and scale high-quality, and extensible AI agents without needing to manage the underlying compute and storage resources. It is particularly useful for enterprise applications since it is a fully managed service with enterprise grade security. 
 
@@ -231,15 +231,15 @@ As we learned in [Lesson 2](../02-explore-agentic-frameworks/) agentic framework
     The tools available in Azure AI Agent Service can be divided into two categories:
 
     1. Knowledge Tools:
-        - [Grounding with Bing Search](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/bing-grounding?tabs=python&pivots=overview)
-        - [File Search](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/file-search?tabs=python&pivots=overview)
-        - [Azure AI Search](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/azure-ai-search?tabs=azurecli%2Cpython&pivots=overview-azure-ai-search)
+        - [Grounding with Bing Search](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/bing-grounding?tabs=python&pivots=overview){target="_blank"}
+        - [File Search](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/file-search?tabs=python&pivots=overview){target="_blank"}
+        - [Azure AI Search](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/azure-ai-search?tabs=azurecli%2Cpython&pivots=overview-azure-ai-search){target="_blank"}
 
     2. Action Tools:
-        - [Function Calling](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/function-calling?tabs=python&pivots=overview)
-        - [Code Interpreter](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/code-interpreter?tabs=python&pivots=overview)
-        - [OpenAI defined tools](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/openapi-spec?tabs=python&pivots=overview)
-        - [Azure Functions](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/azure-functions?pivots=overview)
+        - [Function Calling](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/function-calling?tabs=python&pivots=overview){target="_blank"}
+        - [Code Interpreter](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/code-interpreter?tabs=python&pivots=overview){target="_blank"}
+        - [OpenAI defined tools](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/openapi-spec?tabs=python&pivots=overview){target="_blank"}
+        - [Azure Functions](https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/azure-functions?pivots=overview){target="_blank"}
 
     The Agent Service allows us to be able to use these tools together as a `toolset`. It also utilizes `threads` which keep track of the history of messages from a particular conversation.
 
@@ -287,8 +287,8 @@ Running the app in a secure environment further enhances protection. In enterpri
 
 ## Additional Resources
 
-- [Azure AI Agents Service Workshop](https://microsoft.github.io/build-your-first-agent-with-azure-ai-agent-service-workshop/)
-- [Contoso Creative Writer Multi-Agent Workshop](https://github.com/Azure-Samples/contoso-creative-writer/tree/main/docs/workshop)
-- [Semantic Kernel Function Calling Tutorial](https://learn.microsoft.com/semantic-kernel/concepts/ai-services/chat-completion/function-calling/?pivots=programming-language-python#1-serializing-the-functions)
-- [Semantic Kernel Code Interpreter](https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step3_assistant_tool_code_interpreter.py)
-- [Autogen Tools](https://microsoft.github.io/autogen/dev/user-guide/core-user-guide/components/tools.html)
+- [Azure AI Agents Service Workshop](https://microsoft.github.io/build-your-first-agent-with-azure-ai-agent-service-workshop/){target="_blank"}
+- [Contoso Creative Writer Multi-Agent Workshop](https://github.com/Azure-Samples/contoso-creative-writer/tree/main/docs/workshop){target="_blank"}
+- [Semantic Kernel Function Calling Tutorial](https://learn.microsoft.com/semantic-kernel/concepts/ai-services/chat-completion/function-calling/?pivots=programming-language-python#1-serializing-the-functions){target="_blank"}
+- [Semantic Kernel Code Interpreter](https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step3_assistant_tool_code_interpreter.py){target="_blank"}
+- [Autogen Tools](https://microsoft.github.io/autogen/dev/user-guide/core-user-guide/components/tools.html){target="_blank"}

@@ -84,7 +84,7 @@ Imagine you are designing a Travel Agent, here is how you could think about usin
 3. **Consistency** – Make sure the icons for Share Prompt, add a file or photo and tag someone or something are standard and recognizable. Use the paperclip icon to indicate file upload/sharing with the Agent, and an image icon to indicate graphics upload.
 
 ## Additional Resources
-- [Practices for Governing Agentic AI Systems | OpenAI](https://openai.com)
-- [The HAX Toolkit Project - Microsoft Research](https://microsoft.com)
-- [Responsible AI Toolbox](https://responsibleaitoolbox.ai)
+- [Practices for Governing Agentic AI Systems | OpenAI](https://openai.com){target="_blank"}
+- [The HAX Toolkit Project - Microsoft Research](https://microsoft.com){target="_blank"}
+- [Responsible AI Toolbox](https://responsibleaitoolbox.ai){target="_blank"}
 

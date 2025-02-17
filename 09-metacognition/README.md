@@ -14,11 +14,22 @@ After completing this lesson, you'll be able to:
 
 ## Introduction to Metacognition
 
-Metacognition refers to the higher-order cognitive processes that involve thinking about one’s own thinking. For AI agents, this means being able to evaluate and adjust their actions based on self-awareness and past experiences.
+Metacognition refers to the higher-order cognitive processes that involve thinking about one’s own thinking. For AI agents, this means being able to evaluate and adjust their actions based on self-awareness and past experiences. Metacognition, or "thinking about thinking," is an important concept in the development of agentic AI systems. It involves AI systems being aware of their own internal processes and being able to monitor, regulate, and adapt their behavior accordingly. Much like we do when we read the room or look a problem.  This self-awareness can help AI systems make better decisions, identify errors, and improve their performance over time- again linking back to turing test and the debate over is AI going to take over.
+
+In the context of agentic AI systems, metacognition can help address several challenges, such as:
+- Transparency: Ensuring that AI systems can explain their reasoning and decisions.
+- Reasoning: Enhancing the ability of AI systems to synthesize information and make sound decisions.
+- Adaptation: Allowing AI systems to adjust to new environments and changing conditions.
+- Perception: Improving the accuracy of AI systems in recognizing and interpreting data from their environment.
 
 ### What is Metacognition?
 
-Metacognition, or "thinking about thinking," is a higher-order cognitive process that involves self-awareness and self-regulation of one's cognitive processes. In the realm of AI, metacognition empowers agents to evaluate and adapt their strategies and actions, leading to improved problem-solving and decision-making capabilities. By understanding metacognition, you can design AI agents that are not only more intelligent but also more adaptable and efficient.
+Metacognition, or "thinking about thinking," is a higher-order cognitive process that involves self-awareness and self-regulation of one's cognitive processes. In the realm of AI, metacognition empowers agents to evaluate and adapt their strategies and actions, leading to improved problem-solving and decision-making capabilities. By understanding metacognition, you can design AI agents that are not only more intelligent but also more adaptable and efficient. In true metacognition, you’d see the AI explicitly reasoning about its own reasoning. 
+
+Eample: “I prioritized cheaper flights because… I might be missing out on direct flights, so let me re-check.”.
+Keeping track of how or why it chose a certain route.
+- Noting that it made mistakes because it over-relied on user preferences from last time, so it modifies its decision-making strategy not just the final recommendation.
+- Diagnosing patterns like, “Whenever I see the user mention ‘too crowded,’ I should not only remove certain attractions but also reflect that my method of picking ‘top attractions’ is flawed if I always rank by popularity.”
 
 ### Importance of Metacognition in AI Agents
 
@@ -1306,6 +1317,102 @@ A data analysis agent:
    ```
 
 By leveraging SQL as part of the Retrieval-Augmented Generation (RAG) technique, AI agents like Travel Agent can dynamically retrieve and utilize relevant data to provide accurate and personalized recommendations. 
+
+### Example of Metacongition 
+
+So to demonstrate an implementation of metacongition, let's create a simple agent that *reflects on its decision-making process* while solving a problem. For this example, we'll build a system where an agent tries to optimize the choice of a hotel, but then evaluates its own reasoning and adjusts its strategy when it makes errors or suboptimal choices.
+
+We'll simulate this using a basic example where the agent selects hotels based on a combination of price and quality, but it will "reflect" on its decisions and adjust accordingly. 
+
+#### How this illustrates metacognition:
+
+1. **Initial Decision**: The agent will pick the cheapest hotel, without understanding the quality impact.
+2. **Reflection and Evaluation**: After the initial choice, the agent will check whether the hotel is a "bad" choice using user feedback. If it finds that the hotel’s quality was too low, it reflects on its reasoning.
+3. **Adjusting Strategy**: The agent adjusts its strategy based on its reflection switches from "cheapest" to "highest_quality", thus improving its decision-making process in future iterations.
+
+Here's an example:
+
+```python
+class HotelRecommendationAgent:
+    def __init__(self):
+        self.previous_choices = []  # Stores the hotels chosen previously
+        self.corrected_choices = []  # Stores the corrected choices
+        self.recommendation_strategies = ['cheapest', 'highest_quality']  # Available strategies
+
+    def recommend_hotel(self, hotels, strategy):
+        """
+        Recommend a hotel based on the chosen strategy.
+        The strategy can either be 'cheapest' or 'highest_quality'.
+        """
+        if strategy == 'cheapest':
+            recommended = min(hotels, key=lambda x: x['price'])
+        elif strategy == 'highest_quality':
+            recommended = max(hotels, key=lambda x: x['quality'])
+        else:
+            recommended = None
+        self.previous_choices.append((strategy, recommended))
+        return recommended
+
+    def reflect_on_choice(self):
+        """
+        Reflect on the last choice made and decide if the agent should adjust its strategy.
+        The agent considers if the previous choice led to a poor outcome.
+        """
+        if not self.previous_choices:
+            return "No choices made yet."
+
+        last_choice_strategy, last_choice = self.previous_choices[-1]
+        # Let's assume we have some user feedback that tells us whether the last choice was good or not
+        user_feedback = self.get_user_feedback(last_choice)
+
+        if user_feedback == "bad":
+            # Adjust strategy if the previous choice was unsatisfactory
+            new_strategy = 'highest_quality' if last_choice_strategy == 'cheapest' else 'cheapest'
+            self.corrected_choices.append((new_strategy, last_choice))
+            return f"Reflecting on choice. Adjusting strategy to {new_strategy}."
+        else:
+            return "The choice was good. No need to adjust."
+
+    def get_user_feedback(self, hotel):
+        """
+        Simulate user feedback based on hotel attributes.
+        For simplicity, assume if the hotel is too cheap, the feedback is "bad".
+        If the hotel has quality less than 7, feedback is "bad".
+        """
+        if hotel['price'] < 100 or hotel['quality'] < 7:
+            return "bad"
+        return "good"
+
+# Simulate a list of hotels (price and quality)
+hotels = [
+    {'name': 'Budget Inn', 'price': 80, 'quality': 6},
+    {'name': 'Comfort Suites', 'price': 120, 'quality': 8},
+    {'name': 'Luxury Stay', 'price': 200, 'quality': 9}
+]
+
+# Create an agent
+agent = HotelRecommendationAgent()
+
+# Step 1: The agent recommends a hotel using the "cheapest" strategy
+recommended_hotel = agent.recommend_hotel(hotels, 'cheapest')
+print(f"Recommended hotel (cheapest): {recommended_hotel['name']}")
+
+# Step 2: The agent reflects on the choice and adjusts strategy if necessary
+reflection_result = agent.reflect_on_choice()
+print(reflection_result)
+
+# Step 3: The agent recommends again, this time using the adjusted strategy
+adjusted_recommendation = agent.recommend_hotel(hotels, 'highest_quality')
+print(f"Adjusted hotel recommendation (highest_quality): {adjusted_recommendation['name']}")
+```
+
+#### Agents Metacognition Abilities 
+
+The key here is the agent's ability to:
+- Evaluate its previous choices and decision-making process.
+- Adjust its strategy based on that reflection i.e., metacognition in action.
+
+This is a simple form of metacognition where the system is capable of adjusting its reasoning process based on internal feedback.
 
 ### Conclusion
 

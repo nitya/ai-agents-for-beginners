@@ -1,3 +1,4 @@
+pillow==11.0.0
 azure-ai-inference~=1.0.0b8
 azure-ai-evaluation~=1.1.0
 mistralai~=0.4.2
@@ -11,3 +12,4 @@ autogen-agentchat
 azure-ai-projects
 autogen-ext==0.4.5
 pydantic 
+

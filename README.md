@@ -34,19 +34,18 @@
 ## 🌱 Getting Started
 
 This course has 10 lessons covering the fundamentals of building AI Agents. Each lesson covers its own topic so start wherever you like!
-
-If this is your first time building with Generative AI models. Check out our [Generative AI For Beginners](https://aka.ms/genai-beginners) course that has 21 lessons on building with GenAI.
+If this is your first time building with Generative AI models, check out our [Generative AI For Beginners](https://aka.ms/genai-beginners) course, which includes 21 lessons on building with GenAI.
 
 ### To run the code of this course
 
-This course has code examples on each lesson that has a `code_samples` folder. You can [fork this repo](https://github.com/microsoft/ai-agents-for-beginners/fork) to create a your own copy.  
+Each lesson in this course includes code examples, which can be found in the code_samples folder. You can [fork this repo](https://github.com/microsoft/ai-agents-for-beginners/fork) to create your own copy.  
 
-The code uses these service for Models:
+The code example in these exercise, utilise Azure AI Foundry and GitHub Model Catalogs for interacting with Language Models:
 
 - [Github Models](https://aka.ms/ai-agents-beginners/github-models) - Free / Limited
 - [Azure AI Foundry](https://aka.ms/ai-agents-beginners/ai-foundry) - Azure Account Required
 
-This course also uses these AI Agent frameworks and services:
+This course also uses the following AI Agent frameworks and services from Microsoft:
 
 - [Azure AI Agent Service](https://aka.ms/ai-agents-beginners/ai-agent-service)
 - [Semantic Kernel](https://aka.ms/ai-agents-beginners/semantic-kernel)
@@ -87,11 +86,18 @@ If you get stuck or have any questions about bulding AI Agents, join our [Azure 
 
 Our team produces other courses! Check out:
 
-- [Generative AI for Beginners](https://aka.ms/genai-beginners)
-- [Generative AI for Beginners - .NET](https://aka.ms/genainet)
+- [**NEW** Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+- [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 - [ML for Beginners](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 - [Data Science for Beginners](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 - [AI for Beginners](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101??WT.mc_id=academic-96948-sayoung)
+- [Web Dev for Beginners](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+- [IoT for Beginners](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+- [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+- [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+- [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 
 ## Contributing
 

@@ -10,7 +10,7 @@ This lesson will cover:
 
 - What are AI Agent Frameworks and what do they enable developers to do?
 - How can teams use these to quickly prototype, iterate, and improve my agent’s capabilities?
-- What are the difference between the frameworks and tools created by Microsoft ( [AutoGen](https://aka.ms/ai-agents/autogen) / [Semantic Kernel](https://aka.ms/ai-agents-beginners/semantic-kernel) / [Azure AI Agent Service](https://aka.ms/ai-agents-beginners/ai-agent-service)) 
+- What are the difference between the frameworks and tools created by Microsoft ( [AutoGen](https://aka.ms/ai-agents/autogen){target="_blank"} / [Semantic Kernel](https://aka.ms/ai-agents-beginners/semantic-kernel){target="_blank"} / [Azure AI Agent Service](https://aka.ms/ai-agents-beginners/ai-agent-service){target="_blank"}) 
 - Can I integrate my existing Azure ecosystem tools directly, or do I need standalone solutions?
 - What is Azure AI Agents service and how is this helping me?
 
@@ -139,7 +139,7 @@ Open-source framework developed by Microsoft Research's AI Frontiers Lab. Focuse
 
 AutoGen is built around the core concept of agents, which are autonomous entities that can perceive their environment, make decisions, and take actions to achieve specific goals. Agents communicate through asynchronous messages, allowing them to work independently and in parallel, enhancing system scalability and responsiveness.
 
-Agents are based on the [actor model](https://en.wikipedia.org/wiki/Actor_model). Which according to Wikipedia states that an actor is _the basic building block of concurrent computation. In response to a message it receives, an actor can: make local decisions, create more actors, send more messages, and determine how to respond to the next message received_.
+Agents are based on the [actor model](https://en.wikipedia.org/wiki/Actor_model){target="_blank"}. Which according to Wikipedia states that an actor is _the basic building block of concurrent computation. In response to a message it receives, an actor can: make local decisions, create more actors, send more messages, and determine how to respond to the next message received_.
 
 **Use Cases**: Automating code generation, data analysis tasks, and building custom agents for planning and research functions.
 
@@ -243,14 +243,14 @@ Here's some important core concepts of AutoGen:
 - **Agent Runtime**. The framework provides a runtime environment, enabling communication between agents, manages their identities and lifecycles, and enforce security and privacy boundaries. This means that you can run your agents in a secure and controlled environment, ensuring that they can interact safely and efficiently. There are two runtimes of interest:
   - **Stand-alone runtime**. This is a good choice for single-process applications where all agents are implemented in the same programming language and runs in the same process. Here's an illustration of how it works:
   
-      ![Stand-alone runtime](https://microsoft.github.io/autogen/stable/_images/architecture-standalone.svg)   
+      ![Stand-alone runtime](https://microsoft.github.io/autogen/stable/_images/architecture-standalone.svg){target="_blank"}   
 Application stack
 
     *agents communicate via messages through the runtime, and the runtime manages the lifecycle of agents*
 
   - **Distributed agent runtime**, is suitable for multi-process applications where agents may be implemented in different programming languages and running on different machine. Here's an illustration of how it works:
   
-      ![Distributed runtime](https://microsoft.github.io/autogen/stable/_images/architecture-distributed.svg)
+      ![Distributed runtime](https://microsoft.github.io/autogen/stable/_images/architecture-distributed.svg){target="_blank"}
 
 ## Semantic Kernel + Agent Framework
 
@@ -476,8 +476,8 @@ For AutoGen and Semantic Kernel, you can also integrate with Azure services, but
 
 ## References
 
-- [1] - [Azure Agent Service](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/introducing-azure-ai-agent-service/4298357)
-- [2] - [Semantic Kernel and AutoGen](https://devblogs.microsoft.com/semantic-kernel/microsofts-agentic-ai-frameworks-autogen-and-semantic-kernel/)
-- [3] - [Semantic Kernel Agent Framework](https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-csharp)
-- [4] - [Azure AI Agent service](https://learn.microsoft.com/azure/ai-services/agents/overview)
-- [5] - [Using Azure AI Agent Service with AutoGen / Semantic Kernel to build a multi-agent's solution](https://techcommunity.microsoft.com/blog/educatordeveloperblog/using-azure-ai-agent-service-with-autogen--semantic-kernel-to-build-a-multi-agen/4363121)
+- [1] - [Azure Agent Service](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/introducing-azure-ai-agent-service/4298357){target="_blank"}
+- [2] - [Semantic Kernel and AutoGen](https://devblogs.microsoft.com/semantic-kernel/microsofts-agentic-ai-frameworks-autogen-and-semantic-kernel/){target="_blank"}
+- [3] - [Semantic Kernel Agent Framework](https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-csharp){target="_blank"}
+- [4] - [Azure AI Agent service](https://learn.microsoft.com/azure/ai-services/agents/overview){target="_blank"}
+- [5] - [Using Azure AI Agent Service with AutoGen / Semantic Kernel to build a multi-agent's solution](https://techcommunity.microsoft.com/blog/educatordeveloperblog/using-azure-ai-agent-service-with-autogen--semantic-kernel-to-build-a-multi-agen/4363121){target="_blank"}
